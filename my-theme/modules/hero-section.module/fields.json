@@ -1,0 +1,40 @@
+[
+  {
+    "name": "heading",
+    "label": "Shop Name / Heading",
+    "type": "text",
+    "default": "Your Shop Name"
+  },
+  {
+    "name": "subheading",
+    "label": "Tagline",
+    "type": "text",
+    "default": "Fast. Reliable. Affordable."
+  },
+  {
+    "name": "description",
+    "label": "Short Description",
+    "type": "text",
+    "default": "Best Tire Service in CDO"
+  },
+  {
+    "name": "background_image",
+    "label": "Background Image",
+    "type": "image",
+    "default": {}
+  },
+  {
+    "name": "cta_text",
+    "label": "Button Text",
+    "type": "text",
+    "default": "Call Us Now"
+  },
+  {
+    "name": "cta_url",
+    "label": "Button Link",
+    "type": "url",
+    "default": {
+      "url": { "href": "#contact" }
+    }
+  }
+]

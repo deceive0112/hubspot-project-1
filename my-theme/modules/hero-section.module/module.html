@@ -1,0 +1,15 @@
+<section class="hero">
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+    <h1>{{ module.heading }}</h1>
+    <p class="hero-tagline">{{ module.subheading }}</p>
+    <p class="hero-desc">{{ module.description }}</p>
+
+    {% if module.cta_text %}
+    <a href="{{ module.cta_url.href }}" class="hero-btn">
+      {{ module.cta_text }}
+    </a>
+    {% endif %}
+  </div>
+</section>

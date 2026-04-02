@@ -1,0 +1,78 @@
+/* ── Hero Container ── */
+.hero {
+  position: relative;
+  min-height: 90vh;
+  background-image: url('{{ module.background_image.src }}');
+  background-size: cover;
+  background-position: center;
+  background-color: #1a1a2e; /* fallback if no image */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* ── Dark overlay so text is readable over image ── */
+.hero-overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.55);
+}
+
+/* ── Text sits above the overlay ── */
+.hero-content {
+  position: relative;
+  z-index: 1;
+  padding: 40px 20px;
+  max-width: 800px;
+}
+
+/* ── Heading ── */
+.hero-content h1 {
+  font-size: 52px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+
+/* ── Tagline ── */
+.hero-tagline {
+  font-size: 22px;
+  color: #e63946;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+/* ── Description ── */
+.hero-desc {
+  font-size: 17px;
+  color: #adb5bd;
+  margin-bottom: 32px;
+}
+
+/* ── Button ── */
+.hero-btn {
+  display: inline-block;
+  background-color: #e63946;
+  color: #ffffff;
+  padding: 14px 36px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.hero-btn:hover {
+  background-color: #c1121f;
+}
+
+/* ── Mobile ── */
+@media (max-width: 768px) {
+  .hero-content h1   { font-size: 30px; }
+  .hero-tagline      { font-size: 17px; }
+  .hero-desc         { font-size: 14px; }
+  .hero-btn          { padding: 12px 24px; font-size: 14px; }
+}
