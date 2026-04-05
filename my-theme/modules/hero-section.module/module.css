@@ -2,7 +2,6 @@
 .hero {
   position: relative;
   min-height: 90vh;
-  background-image: url('{{ module.background_image.src }}');
   background-size: cover;
   background-position: center;
   background-color: #1a1a2e; /* fallback if no image */

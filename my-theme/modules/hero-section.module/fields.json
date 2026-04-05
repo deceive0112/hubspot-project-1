@@ -33,8 +33,6 @@
     "name": "cta_url",
     "label": "Button Link",
     "type": "url",
-    "default": {
-      "url": { "href": "#contact" }
-    }
+    "default": null
   }
 ]

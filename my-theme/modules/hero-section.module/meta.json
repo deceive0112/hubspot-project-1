@@ -3,5 +3,9 @@
   "css_assets": [],
   "js_assets": [],
   "other_assets": [],
-  "is_available_for_new_content": true
+  "smart_type": "NOT_SMART",
+  "tags": [],
+  "host_template_types": ["PAGE", "BLOG_POST", "BLOG_LISTING"],
+  "is_available_for_new_content": true,
+  "categories": ["functionality"]
 }
