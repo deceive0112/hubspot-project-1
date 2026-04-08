@@ -4,7 +4,6 @@
   min-height: 90vh;
   background-size: cover;
   background-position: center;
-  background-color: #1a1a2e; /* fallback if no image */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -16,7 +15,8 @@
   position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background-color: rgba(0, 0, 0, 0.55);
+  border-radius: 30px;
+  background-color: rgba(0, 0, 0, 0.30);
 }
 
 /* ── Text sits above the overlay ── */
@@ -47,25 +47,28 @@
 /* ── Description ── */
 .hero-desc {
   font-size: 17px;
-  color: #adb5bd;
+  color: #d9dbdb;
   margin-bottom: 32px;
 }
 
 /* ── Button ── */
 .hero-btn {
   display: inline-block;
-  background-color: #e63946;
+  background-color: rgba(230, 115, 125, 0.3);
   color: #ffffff;
   padding: 14px 36px;
-  border-radius: 4px;
+  border-radius: 12px;
   text-decoration: none;
   font-size: 16px;
   font-weight: 600;
-  transition: background-color 0.2s;
+  transition: background-color 0.3s;
 }
 
 .hero-btn:hover {
-  background-color: #c1121f;
+  background-color: #ec515b;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
 }
 
 /* ── Mobile ── */
