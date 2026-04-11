@@ -160,7 +160,7 @@
     <div class="header__language-switcher--label-current"> {{ locale_name(locale) }}</div>
   {% endif %}
 {% endmacro %}
-<header class="header">
+<header class="header" style="background-image: url('https://245531884.fs1.hubspotusercontent-na2.net/hubfs/245531884/Assets/BG.jpg')">
 
   {# The link below is used for a navigation skipper which allows users navigating the site with their keyboard to skip over the site navigation. More information on the navigation skipper can be found here: https://github.com/HubSpot/cms-theme-boilerplate/wiki/Accessibility #}
 
@@ -195,29 +195,7 @@
 
       {# Header navigation row one #}
 
-
-
       <div class="header__row-1">
-        {% if content.translated_content.values()|selectattr("published")|length or is_listing_view and group.translations %}
-          <div class="header__language-switcher header--element">
-            <div class="header__language-switcher--label">
-              {{ add_lang_switcher() }}
-            </div>
-          </div>
-        {% endif %}
-        <div class="header__search header--element">
-          {% module "site_search"
-            path="@hubspot/search_input",
-            label="Search",
-            field_label="Search",
-            placeholder=""
-          %}
-        </div>
-      </div>
-
-      {# Header navigation row two #}
-
-      <div class="header__row-2">
         <div class="header--toggle header__navigation--toggle"></div>
         {% if content.translated_content|length or is_listing_view and group.translations %}
           <div class="header--toggle header__language-switcher--toggle"></div>
