@@ -23,3 +23,7 @@
     width: 1px !important;
   }
 }
+
+html {
+  scroll-behavior: smooth;
+}
