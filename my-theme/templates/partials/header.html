@@ -178,39 +178,32 @@
 
   <div class="header__container content-wrapper">
 
-    {# Header logo column #}
+  {# Header logo #}
+  <div class="header__logo header__logo--main">
+    {% module "site_logo"
+      path="@hubspot/logo"
+      img={
+        "loading": "eager"
+      }
+    %}
+  </div>
 
-    <div class="header__logo header__logo--main">
-      {% module "site_logo"
-        path="@hubspot/logo"
-        img={
-          "loading": "eager"
-        }
-      %}
-    </div>
-
-    {# Header navigation column #}
-
-    <div class="header__column">
-
-      {# Header navigation row one #}
-
-      <div class="header__row-1">
-        <div class="header--toggle header__navigation--toggle"></div>
-        {% if content.translated_content|length or is_listing_view and group.translations %}
-          <div class="header--toggle header__language-switcher--toggle"></div>
-        {% endif %}
-        <div class="header--toggle header__search--toggle"></div>
-        <div class="header__close--toggle"></div>
-        <div class="header__navigation header--element">
-          {% module "navigation-primary"
-            path="../../modules/menu",
-            label="Primary navigation"
-          %}
-        </div>
+  {# Header navigation #}
+  <div class="header__column">
+    <div class="header__row-1">
+      <div class="header--toggle header__navigation--toggle"></div>
+      {% if content.translated_content|length or is_listing_view and group.translations %}
+        <div class="header--toggle header__language-switcher--toggle"></div>
+      {% endif %}
+      <div class="header__close--toggle"></div>
+      <div class="header__navigation header--element">
+        {% module "navigation-primary"
+          path="../../modules/menu",
+          label="Primary navigation"
+        %}
       </div>
-
     </div>
+  </div>
 
   </div>
 
