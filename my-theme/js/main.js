@@ -26,13 +26,12 @@
 
   // Function for toggling mobile navigation
   function toggleNav() {
+    if (window.innerWidth > 767) return; // skip on desktop/tablet
     allToggles.forEach(function (toggle) {
       toggle.classList.toggle("hide");
     });
-
     nav.classList.toggle("open");
     navToggle.classList.toggle("open");
-
     closeToggle.classList.toggle("show");
   }
 
@@ -136,7 +135,6 @@
           document.documentElement.scrollTop = 0;
         });
       }
-      
     }
   });
 })();
