@@ -24,6 +24,25 @@
     }
   }
 
+  // Force nav visible on all screen sizes
+  function handleResize() {
+    if (nav) {
+      if (window.innerWidth <= 767) {
+        nav.style.display = "block";
+        nav.style.position = "static";
+        nav.style.backgroundColor = "transparent";
+        nav.style.minHeight = "unset";
+      } else {
+        nav.style.display = "";
+        nav.style.position = "";
+        nav.style.backgroundColor = "";
+        nav.style.minHeight = "";
+      }
+    }
+  }
+  handleResize();
+  window.addEventListener("resize", handleResize);
+
   // Function for toggling mobile navigation
   function toggleNav() {
     if (window.innerWidth > 767) return; // skip on desktop/tablet
