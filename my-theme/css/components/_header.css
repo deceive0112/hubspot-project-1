@@ -345,3 +345,78 @@
     gap: 0.25rem;
   }
 }
+
+/* =====================
+   FORCE NO HAMBURGER
+   ===================== */
+@media (max-width: 767px) {
+
+  /* Force nav always visible */
+  .header__navigation {
+    display: block !important;
+    position: static !important;
+    background-color: transparent !important;
+    min-height: unset !important;
+    width: auto !important;
+    top: unset !important;
+    left: unset !important;
+    right: unset !important;
+    z-index: auto !important;
+    border-top: none !important;
+    order: unset !important;
+  }
+
+  /* Hide hamburger toggle button completely */
+  .header__navigation--toggle,
+  .header__navigation--toggle.open,
+  .header__navigation--toggle.hide,
+  .header__close--toggle,
+  .header__close--toggle.show,
+  .header__search--toggle,
+  .header__search--toggle.open {
+    display: none !important;
+    visibility: hidden !important;
+  }
+
+  /* Nav items in single horizontal row */
+  .header__navigation .hs-menu-wrapper > ul,
+  .header__navigation .hs-menu-wrapper > ul.active {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    gap: 0.5rem !important;
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    position: static !important;
+    background: transparent !important;
+  }
+
+  /* Nav links */
+  .header__navigation a {
+    font-size: 0.65rem !important;
+    white-space: nowrap !important;
+    padding: 0 !important;
+    display: inline-block !important;
+    color: #ffffff !important;
+    background: transparent !important;
+    border: none !important;
+    border-bottom: none !important;
+  }
+
+  /* Hide dropdowns on mobile */
+  .header__navigation .hs-menu-wrapper ul ul {
+    display: none !important;
+  }
+
+  /* Row layout */
+  .header__row-1 {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    gap: 0.4rem !important;
+    padding: 0 !important;
+    flex-wrap: nowrap !important;
+  }
+}
