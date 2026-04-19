@@ -242,17 +242,21 @@
    MOBILE (≤767px)
    ===================== */
 @media (max-width: 767px) {
-  .header {
-    background-attachment: scroll;
-    min-height: 100svh;
+  .menu__link {
+    font-size: 0.65rem;
+    letter-spacing: 0.03em;
+    gap: 0.1rem;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
+}
 
   /* Same single-row layout as PC/tablet */
   .header__container {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 0.6rem 0.75rem;
+    padding: 0.5rem 0.6rem;
     flex-wrap: nowrap;
   }
 

@@ -24,28 +24,9 @@
     }
   }
 
-  // Force nav visible on all screen sizes
-  function handleResize() {
-    if (nav) {
-      if (window.innerWidth <= 767) {
-        nav.style.display = "block";
-        nav.style.position = "static";
-        nav.style.backgroundColor = "transparent";
-        nav.style.minHeight = "unset";
-      } else {
-        nav.style.display = "";
-        nav.style.position = "";
-        nav.style.backgroundColor = "";
-        nav.style.minHeight = "";
-      }
-    }
-  }
-  handleResize();
-  window.addEventListener("resize", handleResize);
-
   // Function for toggling mobile navigation
   function toggleNav() {
-    if (window.innerWidth > 767) return; // skip on desktop/tablet
+    if (window.innerWidth <= 767) return; // disable hamburger on mobile
     allToggles.forEach(function (toggle) {
       toggle.classList.toggle("hide");
     });
@@ -105,11 +86,36 @@
     });
   }
 
+  // Force nav always visible on mobile — no hamburger
+  function handleResize() {
+    var navEl = document.querySelector(".header__navigation");
+    if (navEl) {
+      if (window.innerWidth <= 767) {
+        navEl.style.display = "block";
+        navEl.style.position = "static";
+        navEl.style.backgroundColor = "transparent";
+        navEl.style.minHeight = "unset";
+        navEl.style.width = "auto";
+        navEl.classList.remove("open");
+      } else {
+        navEl.style.display = "";
+        navEl.style.position = "";
+        navEl.style.backgroundColor = "";
+        navEl.style.minHeight = "";
+        navEl.style.width = "";
+      }
+    }
+  }
+
   // Execute JavaScript on document ready
   domReady(function () {
     if (!document.body) {
       return;
     } else {
+      // Run resize handler immediately and on window resize
+      handleResize();
+      window.addEventListener("resize", handleResize);
+
       // Function dependent on language switcher
       if (langSwitcher) {
         langToggle.addEventListener("click", toggleLang);
