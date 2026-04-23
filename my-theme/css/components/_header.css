@@ -243,9 +243,9 @@
    ===================== */
 @media (max-width: 767px) {
   .menu__link {
-    font-size: 0.65rem;
+    font-size: 0.45rem;
     letter-spacing: 0.03em;
-    gap: 0.1rem;
+    gap: 0.05rem;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -256,7 +256,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 0.5rem 0.6rem;
+    padding: 0.4rem 0.5rem;
     flex-wrap: nowrap;
   }
 
@@ -330,23 +330,23 @@
   .header__navigation .hs-menu-wrapper li:hover > ul {
     display: none !important;
   }
-}
+
 
 /* =====================
    VERY SMALL (≤380px)
    ===================== */
 @media (max-width: 380px) {
   .header__logo {
-    max-width: 55px;
+    max-width: 45px;
   }
 
   .header__navigation a {
-    font-size: 0.52rem;
+    font-size: 0.45rem;
     letter-spacing: 0.01em;
   }
 
   .header__row-1 {
-    gap: 0.25rem;
+    gap: 0.15rem;
   }
 }
 
