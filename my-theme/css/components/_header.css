@@ -362,7 +362,7 @@
 }
 
 /* =====================
-   VERY SMALL (<=320px)
+   VERY SMALL PHONE (<=320px)
    ===================== */
 @media (max-width: 320px) {
   .header__logo {
