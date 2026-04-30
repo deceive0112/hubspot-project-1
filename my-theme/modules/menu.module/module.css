@@ -103,7 +103,7 @@
 
 @media (max-width: 767px) {
   .menu__item--depth-1 {
-    border-top: none; /* remove mobile border */
+    border-top: none;
     padding: 0.1rem 0.2rem;
   }
 
@@ -117,7 +117,6 @@
 }
 
 /* Menu items - submenus */
-
 .menu__submenu {
   box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.2);
   border-radius: 3px;
