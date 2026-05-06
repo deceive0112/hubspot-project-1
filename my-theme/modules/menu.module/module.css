@@ -237,7 +237,6 @@
   }
 }
 
-/* Hide child toggle on mobile */
 @media (max-width: 767px) {
   .menu__child-toggle {
     display: none !important;
