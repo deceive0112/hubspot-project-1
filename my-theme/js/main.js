@@ -13,8 +13,6 @@
   );
   var emailGlobalUnsub = document.querySelector('input[name="globalunsub"]');
 
-  // Functions
-
   // Function for executing code on document ready
   function domReady(callback) {
     if (["interactive", "complete"].indexOf(document.readyState) >= 0) {
